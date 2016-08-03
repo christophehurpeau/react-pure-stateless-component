@@ -4,7 +4,9 @@
   "description": "Pure React stateless component",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "release": "pob-repository-check-clean && pob-release",
+    "preversion": "pob-repository-check-clean",
+    "version": "pob-version"
   },
   "repository": {
     "type": "git",
@@ -22,5 +24,8 @@
   "homepage": "https://github.com/christophehurpeau/react-pure-stateless-component#readme",
   "peerDependencies": {
     "react": "^15.3.0"
+  },
+  "dependencies": {
+    "pob-release": "^2.0.5"
   }
 }
