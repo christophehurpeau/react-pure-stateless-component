@@ -1,3 +1,8 @@
+### v0.0.3
+
+- [`9aee7b9`](https://github.com/christophehurpeau/react-pure-stateless-component/commit/9aee7b9d5208ec54a604c79ee6185ff5b5154647) changelog remove first commit in 0.0.2 (Christophe Hurpeau)
+- [`8e19951`](https://github.com/christophehurpeau/react-pure-stateless-component/commit/8e199510b9e75c81373259471c8cfe95bae9ccc0) pob-release is a devDependency (Christophe Hurpeau)
+
 ### v0.0.2
 
 - [`3a981ec`](https://github.com/christophehurpeau/react-pure-stateless-component/commit/3a981ecc18b29b73401f66f4021c7e4d3ac4e653) allow to pass a stateless component (Christophe Hurpeau)

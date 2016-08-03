@@ -1,6 +1,6 @@
 {
   "name": "react-pure-stateless-component",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Pure React stateless component",
   "main": "index.js",
   "scripts": {
