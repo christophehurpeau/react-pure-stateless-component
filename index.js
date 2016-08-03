@@ -4,7 +4,8 @@ var shallowEqual = require('fbjs/lib/shallowEqual');
 module.exports = function createPureStatelessComponent(propTypes, contextTypes, renderFunction) {
   if (typeof propTypes === 'function') {
     renderFunction = propTypes;
-    propTypes = undefined;
+    propTypes = renderFunction.propTypes;
+    contextTypes = renderFunction.contextTypes;
   } else if (typeof contextTypes === 'function') {
     renderFunction = contextTypes;
     contextTypes = undefined;
