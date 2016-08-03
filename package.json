@@ -8,10 +8,7 @@
     "preversion": "pob-repository-check-clean",
     "version": "pob-version"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/christophehurpeau/react-pure-stateless-component.git"
-  },
+  "repository": "christophehurpeau/react-pure-stateless-component",
   "keywords": [
     "react",
     "stateless-component"
