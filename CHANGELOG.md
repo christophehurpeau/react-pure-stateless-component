@@ -1,3 +1,7 @@
+### v0.1.0
+
+- [`e5481cb`](https://github.com/christophehurpeau/react-pure-stateless-component/commit/e5481cbf21d169cc012c3c13197cb04fba722b93) breaking change in API and better readme (Christophe Hurpeau)
+
 ### v0.0.3
 
 - [`9aee7b9`](https://github.com/christophehurpeau/react-pure-stateless-component/commit/9aee7b9d5208ec54a604c79ee6185ff5b5154647) changelog remove first commit in 0.0.2 (Christophe Hurpeau)
