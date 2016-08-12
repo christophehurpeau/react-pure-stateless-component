@@ -1,26 +1,25 @@
 var React = require('react');
 var shallowEqual = require('fbjs/lib/shallowEqual');
 
-module.exports = function createPureStatelessComponent(propTypes, contextTypes, renderFunction) {
-  if (typeof propTypes === 'function') {
-    renderFunction = propTypes;
-    propTypes = renderFunction.propTypes;
-    contextTypes = renderFunction.contextTypes;
-  } else if (typeof contextTypes === 'function') {
-    renderFunction = contextTypes;
-    contextTypes = undefined;
+module.exports = function createPureStatelessComponent(statelessComponent) {
+  if (typeof statelessComponent === 'function') {
+    statelessComponent = {
+      propTypes: statelessComponent.propTypes,
+      contextTypes: statelessComponent.contextTypes,
+      render: statelessComponent,
+    };
   }
 
   return React.createClass({
-    propTypes: propTypes,
-    contextTypes: contextTypes,
+    propTypes: statelessComponent.propTypes,
+    contextTypes: statelessComponent.contextTypes,
 
     shouldComponentUpdate: function(nextProps) {
       return !shallowEqual(this.props, nextProps);
     },
 
     render: function() {
-      return renderFunction(this.props, this.context);
+      return statelessComponent.render(this.props, this.context);
     }
   });
 };

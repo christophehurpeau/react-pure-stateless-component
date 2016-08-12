@@ -4,6 +4,26 @@ Pure React stateless component
 
 [![Dependency Status][daviddm-image]][daviddm-url]
 
+## Why this package ?
+
+A React component's render function is "pure" when it renders the same result given the same props and state.
+You can use this for a performance boost in some cases.
+
+Under the hood, this wrap the stateless component into a class component implementing `shouldComponentUpdate`, 
+in which it shallowly compares the current props with the next one and returns false if the equalities pass.
+
+## Stateless components are not pure ?
+
+Not always. That's why react can't do pure optimisations by default on them.
+
+Exemple of a unpure stateless component:
+
+```js
+const Clock = () => <div>{Date.time()}</div>
+```
+
+An unpure component can also be called inside a stateless component.
+
 ## Install
 
 ```sh
@@ -16,11 +36,18 @@ npm install --save react-pure-stateless-component
 import React, { PropTypes } from 'react';
 import createPureStatelessComponent from 'react-pure-stateless-component';
 
-export default createPureStatelessComponent(
-  { i: PropTypes.number }, // propTypes
-  ({ i }) => <div>{i}</div>
-)
+export default createPureStatelessComponent({
+    propTypes: { 
+        i: PropTypes.number, 
+    },
+    
+    render({ i }) {
+        return <div>{i}</div>;
+    }
+});
 ```
+
+You can also pass a existing stateless component:
 
 ```js
 import React, { PropTypes } from 'react';
@@ -33,8 +60,13 @@ function MyStatelessComponent({ i }) {
   return <div>{i}</div>;
 }
 
-export default createPureStatelessComponent(MyStatelessComponent)
+export default createPureStatelessComponent(MyStatelessComponent);
 ```
+
+## Similar libraries
+
+- [react-pure-stateless](https://www.npmjs.com/package/react-pure-stateless)
+
 
 [npm-image]: https://img.shields.io/npm/v/react-pure-stateless-component.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/react-pure-stateless-component
