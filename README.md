@@ -37,6 +37,8 @@ import React, { PropTypes } from 'react';
 import createPureStatelessComponent from 'react-pure-stateless-component';
 
 export default createPureStatelessComponent({
+    displayName: 'MyStatelessComponent',
+
     propTypes: { 
         i: PropTypes.number, 
     },
