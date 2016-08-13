@@ -1,3 +1,7 @@
+### v0.2.1
+
+- [`a6e4c16`](https://github.com/christophehurpeau/react-pure-stateless-component/commit/a6e4c1648317136afb1b9a81d954ee437302323c) displayName in readme (Christophe Hurpeau)
+
 ### v0.2.0
 
 - [`eef9cd0`](https://github.com/christophehurpeau/react-pure-stateless-component/commit/eef9cd0777092ec567de261fdaf70b55e0986e30) displayName (Christophe Hurpeau)
