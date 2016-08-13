@@ -1,3 +1,7 @@
+### v0.2.0
+
+- [`eef9cd0`](https://github.com/christophehurpeau/react-pure-stateless-component/commit/eef9cd0777092ec567de261fdaf70b55e0986e30) displayName (Christophe Hurpeau)
+
 ### v0.1.0
 
 - [`e5481cb`](https://github.com/christophehurpeau/react-pure-stateless-component/commit/e5481cbf21d169cc012c3c13197cb04fba722b93) breaking change in API and better readme (Christophe Hurpeau)
