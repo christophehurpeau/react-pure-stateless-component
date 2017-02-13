@@ -1,0 +1,1 @@
+This project tests the "react-pure-stateless-component" library.
