@@ -55,12 +55,13 @@ You can also pass a existing stateless component:
 import React, { PropTypes } from 'react';
 import createPureStatelessComponent from 'react-pure-stateless-component';
 
+const propTypes = { i: PropTypes.number };
 
-MyStatelessComponent.propTypes = { i: PropTypes.number };
-
-function MyStatelessComponent({ i }) {
+const MyStatelessComponent = ({ i }) => {
   return <div>{i}</div>;
-}
+};
+
+MyStatelessComponent.propTypes = propTypes;
 
 export default createPureStatelessComponent(MyStatelessComponent);
 ```
