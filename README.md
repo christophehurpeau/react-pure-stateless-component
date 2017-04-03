@@ -9,7 +9,7 @@ Pure React stateless component
 A React component's render function is "pure" when it renders the same result given the same props and state.
 You can use this for a performance boost in some cases.
 
-Under the hood, this wrap the stateless component into a class component implementing `shouldComponentUpdate`, 
+Under the hood, this wrap the stateless component into a class component implementing `shouldComponentUpdate`,
 in which it shallowly compares the current props with the next one and returns false if the equalities pass.
 
 ## Stateless components are not pure ?
@@ -23,6 +23,11 @@ const Clock = () => <div>{Date.time()}</div>
 ```
 
 An unpure component can also be called inside a stateless component.
+
+## When not to use ?
+
+- If you don't need perf optimisations.
+- If you use [react-redux](https://www.npmjs.com/package/react-redux), you can use [connect](https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options) to make the component pure.
 
 ## Install
 
@@ -39,10 +44,10 @@ import createPureStatelessComponent from 'react-pure-stateless-component';
 export default createPureStatelessComponent({
     displayName: 'MyStatelessComponent',
 
-    propTypes: { 
-        i: PropTypes.number, 
+    propTypes: {
+        i: PropTypes.number,
     },
-    
+
     render({ i }) {
         return <div>{i}</div>;
     }
