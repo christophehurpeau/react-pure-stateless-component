@@ -1,3 +1,12 @@
+<a name="0.3.0"></a>
+# [0.3.0](https://github.com/christophehurpeau/react-pure-stateless-component/compare/v0.2.1...v0.3.0) (2017-05-30)
+
+
+### Features
+
+* support react 16 ([2f55845](https://github.com/christophehurpeau/react-pure-stateless-component/commit/2f55845))
+
+
 ### v0.2.1
 
 - [`a6e4c16`](https://github.com/christophehurpeau/react-pure-stateless-component/commit/a6e4c1648317136afb1b9a81d954ee437302323c) displayName in readme (Christophe Hurpeau)
