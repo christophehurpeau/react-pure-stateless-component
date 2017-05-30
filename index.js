@@ -1,4 +1,4 @@
-var createClass = require('react').createClass;
+var createClass = require('create-react-class');
 var shallowEqual = require('fbjs/lib/shallowEqual');
 
 module.exports = function createPureStatelessComponent(statelessComponent) {
