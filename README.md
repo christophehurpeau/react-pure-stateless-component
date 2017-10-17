@@ -16,7 +16,7 @@ in which it shallowly compares the current props with the next one and returns f
 
 Not always. That's why react can't do pure optimisations by default on them.
 
-Exemple of a unpure stateless component:
+Example of an unpure stateless component:
 
 ```js
 const Clock = () => <div>{Date.time()}</div>
